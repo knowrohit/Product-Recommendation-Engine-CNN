@@ -27,8 +27,8 @@ firebase_admin.initialize_app(cred, {
 })
 print("done")
 
-subscription_key = "9ce34950235d4aba8422ed848bef5b52"
-endpoint = "https://bodegacv.cognitiveservices.azure.com/"
+subscription_key = "add-- subs key"
+endpoint = "add endpoint here !"
 
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
@@ -37,7 +37,7 @@ def recommend_svj(request):
     global computervision_client, results_list, cred
 
 
-    URL = "https://projectbodega.azurewebsites.net/bodega-api/product/"
+    URL = "add json to parse product items "
     r = requests.get(url = URL, params = None)
     image_url = r.json()["results"][0]["product_image1"]
     remote_image_url = image_url
@@ -60,7 +60,7 @@ def recommend_svj(request):
 
     if r.method == 'POST':
 
-        URL_meta = "https://bdgdao.azurewebsites.net/bodega-api/product_metadata/"
+        URL_meta = "add product metadata using the json"
         r = requests.post(url= URL_meta, params= None)
         request_time = time.time()
         
@@ -89,10 +89,10 @@ def recommend_svj(request):
 #looping thru pages
 '''for i in range(1, 7, 1):
      
-    URL = "https://projectbodega.azurewebsites.net/bodega-api/product/?page={}".format(i)
+    URL = "add json url +page={}".format(i)
     print(URL)'''
 
-'''URL = "https://projectbodega.azurewebsites.net/bodega-api/product/"
+'''URL = "json product url"
 r = requests.get(url = URL, params = None)
 image_url = r.json()["results"][7]["product_image1"]
 remote_image_url = image_url
@@ -120,6 +120,6 @@ ref.update ({
 	'9/productHashkey' : results_list	
 })'''
 
-'''fb_app = firebase.FirebaseApplication("https://recomai-default-rtdb.firebaseio.com/", None)
+'''fb_app = firebase.FirebaseApplication("add firebase url", None)
 result = fb_app.get('/results', "1/productHashkey" )
 print (result)'''
