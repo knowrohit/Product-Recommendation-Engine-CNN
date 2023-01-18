@@ -10,7 +10,7 @@ import urllib
 
 from urllib import request
 
-URL = "http://projectbodega.azurewebsites.net/bodega-api/product/?format=json&page=2"
+URL = "add url of your json to parse product items +format=json&page=2"
 r = requests.get(url = URL, params = None)
 image_url = r.json()["results"][1]["product_image1"]
 print(image_url)
@@ -42,7 +42,7 @@ with io.open(path, "rb") as movie:
 operation = video_client.annotate_video(
     request={"features": features, "input_content": input_content}
 )
-print("\n====BODEGA COLD START=====")
+print("\n==== COLD START=====")
 
 
 result = operation.result(timeout=90)
