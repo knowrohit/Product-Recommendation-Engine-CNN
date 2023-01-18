@@ -4,7 +4,7 @@ import streamlit as st
 from vgg_image_net import *
 
 st.set_page_config(layout="wide")
-st.title(":camera: Bodega Recom")
+st.title(":camera: Recom engine")
 
 
 # Let user upload a picture
